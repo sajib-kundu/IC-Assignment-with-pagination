@@ -1,0 +1,44 @@
+/* styles.css or style.css */
+
+/* Container for the favorites list */
+.favorites-list {
+    display: flex; /* Use flexbox for horizontal alignment */
+    flex-wrap: wrap; /* Allow wrapping to the next row if there are too many cards */
+    gap: 16px; /* Add spacing between cards */
+    justify-content: center; /* Center-align the cards */
+    padding: 16px;
+  }
+  
+  /* Styling for each card */
+  .pokemon-card {
+    flex: 0 1 calc(25% - 16px); /* Adjust the width of each card (4 cards per row) */
+    max-width: 300px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    text-align: center;
+  }
+  
+  /* Ensure images fit within cards */
+  .pokemon-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Button styling */
+  .pokemon-card button {
+    margin-top: 8px;
+    padding: 8px 16px;
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .pokemon-card button:hover {
+    background-color: #00bcd4;
+  }

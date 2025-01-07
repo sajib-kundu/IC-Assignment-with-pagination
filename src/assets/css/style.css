@@ -1,0 +1,207 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background-color: #00bcd4; /* Changed to teal */
+  color: #fff;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0097a7; /* Slightly darker shade for hover */
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00bcd4; /* Changed to teal */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky; /* Make the navbar sticky */
+  top: 0;           /* Stick to the top of the page */
+  z-index: 1000;    /* Ensure it stays above other content */
+}
+
+.navbar a {
+  margin: 0 10px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Pokemon List Styles */
+.pokemon-list {
+  display: flex; /* Change to flexbox */
+  flex-wrap: wrap; /* Allow wrapping to the next row if needed */
+  gap: 20px; /* Spacing between cards */
+  padding: 20px;
+  justify-content: center; /* Center the cards horizontally */
+  align-items: flex-start; /* Align items to the top */
+}
+
+/* Pokemon Card Styles */
+.pokemon-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+}
+
+.pokemon-card h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.pokemon-card button {
+  margin-top: 10px;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Pokemon Details Styles */
+.pokemon-details {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-details h2 {
+  text-transform: capitalize;
+  font-size: 24px;
+  color: #333;
+}
+
+.pokemon-details img {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 20px auto;
+}
+
+.pokemon-details p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.pokemon-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pokemon-details ul li {
+  font-size: 14px;
+  color: #555;
+}
+
+.pokemon-details button {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  background-color: #00bcd4; /* Changed to teal */
+  padding: 10px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .pokemon-list {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .pokemon-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .pokemon-details h2 {
+    font-size: 20px;
+  }
+}
+
+/* Styling for the search bar input */
+.navbar input {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #00bcd4; /* Light border color initially */
+  outline: #00bcd4; /* Remove the default outline */
+  width: 200px;
+}
+/* 
+.search-bar input {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #00bcd4; 
+  outline: #00bcd4; 
+  width: 200px;
+} */
+
+
+/* When the search bar is focused, set the border color to navbar color */
+/* .navbarinput:focus {
+  border-color: #00bcd4; 
+  box-shadow: 0 0 5px rgba(0, 188, 212, 0.5); 
+} */
+
+.sorting-controls {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
